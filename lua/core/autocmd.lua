@@ -23,3 +23,4 @@ vim.api.nvim_create_autocmd({'BufWinEnter'}, {
     pattern = '*',
     command = 'silent! normal! g`"zv',
 })
+

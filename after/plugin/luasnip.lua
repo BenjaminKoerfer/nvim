@@ -15,8 +15,6 @@ local sn = require("luasnip.util.functions").sn
 --------------------------------------------------------
 -- AUTOSNIPPETS
 --------------------------------------------------------
-local sub = function(args, snip)
-end
 
 -- parser is used for VS**** style snippets.
 ls.add_snippets("lua", {
@@ -50,22 +48,22 @@ ls.add_snippets("tex", {
     s("oBdA", t("ohne Beschränkung der Allgemeinheit")),
     -- mathmode
     s({ trig = "dm", snippetType = "autosnippet", dscr = "display math" },
-        fmt(
-            [[
-            <>
-                <>
-            <>]],
-            { t("\\["), i(1), t("\\]") },
-            { delimiters = "<>" }
-        )),
+    fmt(
+    [[
+    <>
+    <>
+    <>]],
+    { t("\\["), i(1), t("\\]") },
+    { delimiters = "<>" }
+    )),
     s({ trig = "//", snippetType = "autosnippet", dscr = "fraction" },
-        fmt([[\frac{<>}{<>}]], { i(1), i(2) }, { delimiters = "<>" })),
+    fmt([[\frac{<>}{<>}]], { i(1), i(2) }, { delimiters = "<>" })),
 
 
 
 
     ls.parser.parse_snippet("lorem",
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse"),
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse"),
 
     -- begin/end
     ls.parser.parse_snippet("ali*", "\\begin{align*}\n\t$1\n\\end{align*}"),
@@ -90,8 +88,8 @@ ls.add_snippets("tex", {
     ls.parser.parse_snippet("Quelle", "\\begin{flushright}\n\t\\tiny{Quelle: $1}\n\\end{flushright}"),
     -- listen
     s("enumerate",
-        fmt("\\begin{enumerate}<>\n\t\\item <>\n\\end{enumerate}", { c(1, { t(""), t("[label=\\alph*)]") }), i(2) },
-            { delimiters = "<>" })),
+    fmt("\\begin{enumerate}<>\n\t\\item <>\n\\end{enumerate}", { c(1, { t(""), t("[label=\\alph*)]") }), i(2) },
+    { delimiters = "<>" })),
 
 })
 --------------------------------------------------------
@@ -104,38 +102,38 @@ ls.add_snippets("java", {
         i(0, ""),
     })),
     s("method", fmt("{}{}{} {}({}){{\n\t{}\n}}", { -- spancing is important
-        c(1, {
-            t("public "),
-            t("private "),
-            t("protected "),
-        }),
-        c(2, {
-            t("static "),
-            t(""),
-        }),
-        i(3, "void"),
-        i(4, "name"),
-        i(5, ""),
-        i(6, ""),
-    })),
-    s("sout", fmt("System.out.println({});", {
-        i(1, "text"),
-    })),
-    s("randarr", fmt("for (int i = 0; i < {}; i++) {{\n\t{}[i] = (int) (Math.random() * {});\n}}", {
-        i(1, "length"),
-        i(2, "array"),
-        i(3, "max"),
-    })),
-    s("newrandarr",
-        fmt("int[] {} = new int[{}];\nfor (int i = 0; i < {}; i++) {{\n\t{}[i] = (int) (Math.random() * {});\n}}", {
-            i(1, "name"),
-            i(2, "length"),
-            rep(2, "length"),
-            rep(1, "name"),
-            i(3, "max"),
-        })),
-    s("rand", fmt("int {} = (int) (Math.random() * {});", {
-        i(1, "name"),
-        i(2, "max"),
-    })),
+    c(1, {
+        t("public "),
+        t("private "),
+        t("protected "),
+    }),
+    c(2, {
+        t("static "),
+        t(""),
+    }),
+    i(3, "void"),
+    i(4, "name"),
+    i(5, ""),
+    i(6, ""),
+})),
+s("sout", fmt("System.out.println({});", {
+    i(1, "text"),
+})),
+s("randarr", fmt("for (int i = 0; i < {}; i++) {{\n\t{}[i] = (int) (Math.random() * {});\n}}", {
+    i(1, "length"),
+    i(2, "array"),
+    i(3, "max"),
+})),
+s("newrandarr",
+fmt("int[] {} = new int[{}];\nfor (int i = 0; i < {}; i++) {{\n\t{}[i] = (int) (Math.random() * {});\n}}", {
+    i(1, "name"),
+    i(2, "length"),
+    rep(2, "length"),
+    rep(1, "name"),
+    i(3, "max"),
+})),
+s("rand", fmt("int {} = (int) (Math.random() * {});", {
+    i(1, "name"),
+    i(2, "max"),
+})),
 })
