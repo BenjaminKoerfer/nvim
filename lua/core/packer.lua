@@ -125,8 +125,8 @@ return require('packer').startup(function(use)
     use 'stevearc/conform.nvim'
 
     -- custom plugins
-    use '~/work/plugins/start.nvim'
-    use '~/work/plugins/todocomment'
-    use '~/work/plugins/wordcount'
+    -- use '~/work/plugins/start.nvim'
+    -- use '~/work/plugins/todocomment'
+    -- use '~/work/plugins/wordcount'
     use '~/work/plugins/latexnavigator'
 end)
