@@ -141,5 +141,4 @@ s("rand", fmt("int {} = (int) (Math.random() * {});", {
 -- C
 --------------------------------------------------------
 ls.add_snippets("c", {
-    s("main", "int main(int argc, char const *argv[]) {\n\t$0\n}"),
 })
