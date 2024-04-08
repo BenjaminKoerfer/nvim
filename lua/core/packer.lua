@@ -11,7 +11,6 @@ return require('packer').startup(function(use)
     use 'ggandor/leap.nvim'
     --
     use { 'ArbitRandomUser/latexrenderer' }
-    use { 'github/copilot.vim' }
     use 'vimwiki/vimwiki'
 
     -- Telescope

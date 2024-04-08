@@ -125,11 +125,6 @@ _G.packer_plugins = {
     path = "/Users/Benjamin-Koerfer/.local/share/nvim/site/pack/packer/start/conform.nvim",
     url = "https://github.com/stevearc/conform.nvim"
   },
-  ["copilot.vim"] = {
-    loaded = true,
-    path = "/Users/Benjamin-Koerfer/.local/share/nvim/site/pack/packer/start/copilot.vim",
-    url = "https://github.com/github/copilot.vim"
-  },
   ["darcula-solid"] = {
     loaded = true,
     path = "/Users/Benjamin-Koerfer/.local/share/nvim/site/pack/packer/start/darcula-solid",
@@ -174,7 +169,7 @@ _G.packer_plugins = {
   latexnavigator = {
     loaded = true,
     path = "/Users/Benjamin-Koerfer/.local/share/nvim/site/pack/packer/start/latexnavigator",
-    url = "/Users/Benjamin-Koerfer/work/plugins/latexnavigator"
+    url = "https://github.com//Users/Benjamin-Koerfer/work/plugins/latexnavigator"
   },
   latexrenderer = {
     loaded = true,
@@ -262,11 +257,6 @@ _G.packer_plugins = {
     path = "/Users/Benjamin-Koerfer/.local/share/nvim/site/pack/packer/start/rose-pine",
     url = "https://github.com/rose-pine/neovim"
   },
-  ["start.nvim"] = {
-    loaded = true,
-    path = "/Users/Benjamin-Koerfer/.local/share/nvim/site/pack/packer/start/start.nvim",
-    url = "/Users/Benjamin-Koerfer/work/plugins/start.nvim"
-  },
   ["telescope-fzf-native.nvim"] = {
     loaded = true,
     path = "/Users/Benjamin-Koerfer/.local/share/nvim/site/pack/packer/start/telescope-fzf-native.nvim",
@@ -281,11 +271,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/Benjamin-Koerfer/.local/share/nvim/site/pack/packer/start/todo-comments.nvim",
     url = "https://github.com/folke/todo-comments.nvim"
-  },
-  todocomment = {
-    loaded = true,
-    path = "/Users/Benjamin-Koerfer/.local/share/nvim/site/pack/packer/start/todocomment",
-    url = "/Users/Benjamin-Koerfer/work/plugins/todocomment"
   },
   tokyonight = {
     loaded = true,
@@ -332,19 +317,14 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/Benjamin-Koerfer/.local/share/nvim/site/pack/packer/start/which-key.nvim",
     url = "https://github.com/folke/which-key.nvim"
-  },
-  wordcount = {
-    loaded = true,
-    path = "/Users/Benjamin-Koerfer/.local/share/nvim/site/pack/packer/start/wordcount",
-    url = "/Users/Benjamin-Koerfer/work/plugins/wordcount"
   }
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: kanagawa
-time([[Config for kanagawa]], true)
-try_loadstring("\27LJ\2\n8\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0\25colorscheme kanagawa\bcmd\bvim\0", "config", "kanagawa")
-time([[Config for kanagawa]], false)
+-- Config for: Comment.nvim
+time([[Config for Comment.nvim]], true)
+try_loadstring("\27LJ\2\n5\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\fComment\frequire\0", "config", "Comment.nvim")
+time([[Config for Comment.nvim]], false)
 -- Config for: which-key.nvim
 time([[Config for which-key.nvim]], true)
 try_loadstring("\27LJ\2\nt\0\0\3\0\a\0\0156\0\0\0009\0\1\0+\1\2\0=\1\2\0006\0\0\0009\0\1\0)\1,\1=\1\3\0006\0\4\0'\2\5\0B\0\2\0029\0\6\0004\2\0\0B\0\2\1K\0\1\0\nsetup\14which-key\frequire\15timeoutlen\ftimeout\6o\bvim\0", "config", "which-key.nvim")
@@ -353,10 +333,10 @@ time([[Config for which-key.nvim]], false)
 time([[Config for rose-pine]], true)
 try_loadstring("\27LJ\2\n9\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0\26colorscheme rose-pine\bcmd\bvim\0", "config", "rose-pine")
 time([[Config for rose-pine]], false)
--- Config for: Comment.nvim
-time([[Config for Comment.nvim]], true)
-try_loadstring("\27LJ\2\n5\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\fComment\frequire\0", "config", "Comment.nvim")
-time([[Config for Comment.nvim]], false)
+-- Config for: kanagawa
+time([[Config for kanagawa]], true)
+try_loadstring("\27LJ\2\n8\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0\25colorscheme kanagawa\bcmd\bvim\0", "config", "kanagawa")
+time([[Config for kanagawa]], false)
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then

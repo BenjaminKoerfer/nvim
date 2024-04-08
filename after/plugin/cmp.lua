@@ -52,7 +52,6 @@ cmp.setup {
     ['<S-Tab>'] = cmp.config.disable,
   },
   sources = {
-    { name = 'copilot' },
     { name = 'luasnip' },
     { name = 'ultisnips' },
     { name = 'nvim_lua' },
