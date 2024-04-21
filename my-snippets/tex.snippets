@@ -12,6 +12,7 @@ def env(name):
 endglobal
 
 
+context "math()"
 snippet '([A-Za-z])(\d)' "auto subscript" wrA
 `!p snip.rv = match.group(1)`_`!p snip.rv = match.group(2)`
 endsnippet
@@ -31,6 +32,18 @@ snippet beg "begin" i
 \\begin{$1}
 	$2
 \\end{$1}
+endsnippet
+
+snippet sec "section" i
+\\section{$1}$2
+endsnippet
+
+snippet chap "chapter" i
+\\chapter{$1}$2
+endsnippet
+
+snippet subsec "subsection" i
+\\subsection{$1}$2
 endsnippet
 
 snippet fr "frame" i
@@ -135,6 +148,21 @@ endsnippet
 context "math()"
 snippet floor "floor" iA
 \left\lfloor $1 \right\rfloor$0
+endsnippet
+
+context "math()"
+snippet sr "square" iA
+^2
+endsnippet
+
+context "math()"
+snippet cb "cube" iA
+^3
+endsnippet
+
+context "math()"
+snippet td "superscript" iA
+^{$1}$2
 endsnippet
 
 snippet mk "Math" wA
