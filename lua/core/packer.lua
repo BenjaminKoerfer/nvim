@@ -123,32 +123,32 @@ return require("packer").startup(function(use)
 	use("nvim-lualine/lualine.nvim")
 	use("stevearc/conform.nvim")
 
-	use({
-		"epwalsh/obsidian.nvim",
-		tag = "*", -- recommended, use latest release instead of latest commit
-		requires = {
-			-- Required.
-			"nvim-lua/plenary.nvim",
-
-			-- see below for full list of optional dependencies 👇
-		},
-		config = function()
-			require("obsidian").setup({
-				workspaces = {
-					{
-						name = "personal",
-						path = "~/notes",
-					},
-					{
-						name = "work",
-						path = "~/Desktop/Schule!",
-					},
-				},
-
-				-- see below for full list of options 👇
-			})
-		end,
-	})
+	-- use({
+	-- 	"epwalsh/obsidian.nvim",
+	-- 	tag = "*", -- recommended, use latest release instead of latest commit
+	-- 	requires = {
+	-- 		-- Required.
+	-- 		"nvim-lua/plenary.nvim",
+	--
+	-- 		-- see below for full list of optional dependencies 👇
+	-- 	},
+	-- 	config = function()
+	-- 		require("obsidian").setup({
+	-- 			workspaces = {
+	-- 				{
+	-- 					name = "personal",
+	-- 					path = "~/notes",
+	-- 				},
+	-- 				{
+	-- 					name = "work",
+	-- 					path = "~/Desktop/Schule!",
+	-- 				},
+	-- 			},
+	--
+	-- 			-- see below for full list of options 👇
+	-- 		})
+	-- 	end,
+	-- })
 
 	-- custom plugins
 	-- use '~/work/plugins/start.nvim'
