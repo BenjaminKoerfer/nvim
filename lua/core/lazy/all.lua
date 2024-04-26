@@ -6,11 +6,5 @@ return {
 	"vimwiki/vimwiki",
 	"ThePrimeagen/vim-be-good",
 	"SirVer/ultisnips",
-	{
-		"ThePrimeagen/harpoon",
-		branch = "harpoon2",
-		dependencies = { "nvim-lua/plenary.nvim" },
-		--		opts = {}
-	},
 	{ "numToStr/Comment.nvim", opts = {} },
 }

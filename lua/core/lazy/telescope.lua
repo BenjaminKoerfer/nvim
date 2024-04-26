@@ -41,7 +41,6 @@ return { -- Fuzzy Finder (files, lsp, etc)
 		-- This opens a window that shows you all of the keymaps for the current
 		-- Telescope picker. This is really useful to discover what Telescope can
 		-- do as well as how to actually do it!
-
 		-- [[ Configure Telescope ]]
 		-- See `:help telescope` and `:help telescope.setup()`
 		require("telescope").setup({
@@ -77,6 +76,7 @@ return { -- Fuzzy Finder (files, lsp, etc)
 		vim.keymap.set("n", "<leader>sr", builtin.resume, { desc = "[S]earch [R]esume" })
 		vim.keymap.set("n", "<leader>s.", builtin.oldfiles, { desc = '[S]earch Recent Files ("." for repeat)' })
 		vim.keymap.set("n", "<leader><leader>", builtin.buffers, { desc = "[ ] Find existing buffers" })
+		vim.keymap.set("n", "<leader>sa", "<cmd>Telescope find_files cwd=~/vimwiki<cr>", { desc = "[S]earch Wiki" })
 
 		-- Slightly advanced example of overriding default behavior and theme
 		vim.keymap.set("n", "<leader>/", function()
