@@ -15,7 +15,6 @@ return {
 			[[  █████  ░░█████░░██████ ░░██████     ░░███      █████ █████░███ █████ ]],
 			[[ ░░░░░    ░░░░░  ░░░░░░   ░░░░░░       ░░░      ░░░░░ ░░░░░ ░░░ ░░░░░  ]],
 			[[                                                                       ]],
-			[[                     λ it be like that sometimes λ                     ]],
 		}
 
 		dashboard.section.buttons.val = {
@@ -24,7 +23,6 @@ return {
 			dashboard.button("c", "Configuration", ":e ~/.config/nvim/init.lua <CR>"),
 			dashboard.button("u", "Update plugins", ":Lazy sync<CR>"),
 			dashboard.button("r", "Recently opened files", "<cmd>Telescope oldfiles<CR>"),
-			dashboard.button("l", "Open last session", "<cmd>RestoreSession<CR>"),
 			dashboard.button("q", "Quit", ":qa<CR>"),
 		}
 
