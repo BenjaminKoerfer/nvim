@@ -1,3 +1,4 @@
+vim.g.maplocalleader = " "
 return {
 	-- Harpoon plugin configuration
 	{

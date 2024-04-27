@@ -1,3 +1,4 @@
+vim.g.maplocalleader = " "
 return {
 	"folke/todo-comments.nvim",
 	event = "VimEnter",

@@ -1,3 +1,4 @@
+vim.g.maplocalleader = " "
 return { -- Autoformat
 	"stevearc/conform.nvim",
 	lazy = false,

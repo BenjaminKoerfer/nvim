@@ -1,3 +1,4 @@
+vim.g.maplocalleader = " "
 return {
 	"tpope/vim-sleuth", -- Detect tabstop and shiftwidth automatically
 	{ "ArbitRandomUser/latexrenderer", ft = "tex" },
@@ -8,4 +9,7 @@ return {
 	{ "edluffy/hologram.nvim", opts = { autodisplay = true } },
 	"nvim-treesitter/playground",
 	"tpope/vim-fugitive",
+	{ "MaximilianLloyd/ascii.nvim", dependencies = {
+		"MunifTanjim/nui.nvim",
+	} },
 }

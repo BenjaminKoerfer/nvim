@@ -1,3 +1,4 @@
+vim.g.maplocalleader = " "
 return {
 	"L3MON4D3/LuaSnip",
 	build = (function()

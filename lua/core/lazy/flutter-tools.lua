@@ -1,3 +1,4 @@
+vim.g.maplocalleader = " "
 return {
 	"akinsho/flutter-tools.nvim",
 	lazy = false,
