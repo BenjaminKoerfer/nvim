@@ -5,6 +5,6 @@ return {
 		vim.api.nvim_set_var("UltiSnipsSnippetDirectories", { "UltiSnips", "my-snippets" })
 		vim.g.UltiSnipsExpandTrigger = "<tab>"
 		vim.g.UltiSnipsJumpForwardTrigger = "<c-k>"
-		vim.g.UltiSnipsJumpBackwardTrigger = "<c-w>"
+		vim.g.UltiSnipsJumpBackwardTrigger = "<c-b>"
 	end,
 }
