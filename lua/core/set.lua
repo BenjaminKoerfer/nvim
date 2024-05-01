@@ -1,5 +1,3 @@
-vim.g.mapleader = " "
-vim.g.maplocalleader = " "
 function macunix()
 	if vim.fn.has("macunix") == 1 then
 		return true

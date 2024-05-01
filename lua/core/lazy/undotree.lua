@@ -1,4 +1,3 @@
-vim.g.maplocalleader = " "
 return {
 	"mbbill/undotree",
 	config = function()

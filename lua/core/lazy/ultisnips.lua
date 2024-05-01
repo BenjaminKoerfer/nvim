@@ -1,4 +1,3 @@
-vim.g.maplocalleader = " "
 return {
 	"SirVer/ultisnips",
 	config = function()

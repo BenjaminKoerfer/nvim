@@ -1,4 +1,3 @@
-vim.g.maplocalleader = " "
 return {
 	"tpope/vim-sleuth", -- Detect tabstop and shiftwidth automatically
 	{ "ArbitRandomUser/latexrenderer", ft = "tex" },

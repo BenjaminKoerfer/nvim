@@ -1,4 +1,3 @@
-vim.g.maplocalleader = " "
 return { -- You can easily change to a different colorscheme.
 	"rose-pine/neovim",
 	as = "rose-pine",

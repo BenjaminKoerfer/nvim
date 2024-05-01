@@ -1,4 +1,3 @@
-vim.g.maplocalleader = " "
 return { -- Fuzzy Finder (files, lsp, etc)
 	"nvim-telescope/telescope.nvim",
 	event = "VimEnter",
