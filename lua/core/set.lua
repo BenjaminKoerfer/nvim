@@ -1,7 +1,13 @@
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
+function macunix()
+	if vim.fn.has("macunix") == 1 then
+		return true
+	end
+	return false
+end
 
-vim.g.have_nerd_font = false
+vim.g.have_nerd_font = macunix()
 
 vim.opt.tabstop = 4
 
@@ -23,6 +29,7 @@ vim.opt.breakindent = true
 
 -- Save undo history
 vim.opt.undofile = true
+vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
 
 -- Case-insensitive searching UNLESS \C or one or more capital letters in the search term
 vim.opt.ignorecase = true
