@@ -9,6 +9,8 @@ vim.g.have_nerd_font = macunix()
 
 vim.opt.tabstop = 4
 
+vim.o.autoindent = true
+
 vim.opt.number = true
 vim.opt.relativenumber = true
 
@@ -67,3 +69,7 @@ vim.opt.scrolloff = 8
 
 -- Set highlight on search, but clear on pressing <Esc> in normal mode
 vim.opt.hlsearch = true
+
+vim.opt.spelllang = { "de", "en" }
+
+vim.opt.spell = true
