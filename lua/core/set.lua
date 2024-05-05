@@ -22,6 +22,9 @@ vim.opt.showmode = false
 
 vim.opt.breakindent = true
 
+vim.opt.swapfile = false
+vim.opt.backup = false
+
 vim.opt.undofile = true
 vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
 
@@ -29,6 +32,7 @@ vim.opt.ignorecase = true
 vim.opt.smartcase = true
 
 vim.opt.signcolumn = "yes"
+vim.opt.isfname:append("@-@")
 
 vim.opt.updatetime = 250
 
@@ -48,3 +52,4 @@ vim.opt.hlsearch = true
 
 vim.opt.spelllang = { "de", "en" }
 vim.opt.spell = true
+-- vim.opt.colorcolumn = "80"

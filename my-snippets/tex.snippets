@@ -34,16 +34,22 @@ snippet beg "begin" i
 \\end{$1}
 endsnippet
 
-snippet sec "section" i
-\\section{$1}$2
-endsnippet
-
 snippet chap "chapter" i
 \\chapter{$1}$2
 endsnippet
 
+snippet sec "section" i
+\\section{$1}$2
+endsnippet
+
+priority 10
 snippet subsec "subsection" i
 \\subsection{$1}$2
+endsnippet
+
+priority 100
+snippet subsubsec "subsubsection" i
+\\subsubsection{$1}$2
 endsnippet
 
 snippet fr "frame" i
@@ -60,7 +66,7 @@ snippet - "item" i
 \\item 
 endsnippet
 
-snippet p "pause" i
+snippet pause "pause" i
 \\pause
 endsnippet
 
@@ -143,6 +149,12 @@ endsnippet
 context "math()"
 snippet =< "Leftarrow" iA
 \Leftarrow 
+endsnippet
+
+context "math()"
+priority 10000
+snippet <>= "LeftRightarrow" iA
+\Leftrightarrow
 endsnippet
 
 context "math()"
