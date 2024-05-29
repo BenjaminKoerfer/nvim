@@ -1,11 +1,4 @@
-local function macunix()
-	if vim.fn.has("macunix") == 1 then
-		return true
-	end
-	return false
-end
-
-vim.g.have_nerd_font = macunix()
+vim.g.have_nerd_font = true
 
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
