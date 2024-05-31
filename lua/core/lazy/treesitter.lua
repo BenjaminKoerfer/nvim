@@ -2,7 +2,7 @@ return { -- Highlight, edit, and navigate code
 	"nvim-treesitter/nvim-treesitter",
 	build = ":TSUpdate",
 	opts = {
-		ensure_installed = { "bash", "c", "html", "lua", "luadoc", "markdown", "vim", "vimdoc" },
+		ensure_installed = { "latex", "bash", "c", "html", "lua", "luadoc", "markdown", "vim", "vimdoc" },
 		auto_install = true,
 		highlight = {
 			enable = true,

@@ -1,17 +1,16 @@
 return { -- You can easily change to a different colorscheme.
-	"rose-pine/neovim",
-	name = "rose-pine",
+	"folke/tokyonight.nvim",
+	name = "tokyonight",
 	priority = 1000, -- Make sure to load this before all the other start plugins.
 	opts = {
-		variant = "main",
-		disable_background = true,
+		transparent = true,
 		styles = {
-			italic = false,
-			transparency = true,
+			sidebars = "transparent",
+			floats = "transparent",
 		},
 	},
 	init = function()
-		vim.cmd.colorscheme("rose-pine")
+		vim.cmd.colorscheme("tokyonight")
 		vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
 		vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
 		-- You can configure highlights by doing something like:

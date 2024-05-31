@@ -5,8 +5,9 @@ return {
 	-- tag = "v2.15", -- uncomment to pin to a specific release
 	config = function()
 		-- VimTeX configuration goes here
+		vim.g.vimtex_highlight = 1
 		vim.g.vimtex_view_method = "zathura"
 		vim.g.vimtex_compiler_engine = "tectonic"
-		vim.g.vimtex_quickfix_mode = 2
+		vim.g.vimtex_quickfix_mode = 0
 	end,
 }
