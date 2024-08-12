@@ -1,9 +1,12 @@
+vim.opt.guifont = ""
+vim.opt.guicursor = ""
 vim.g.have_nerd_font = true
+vim.opt.termguicolors = true
 
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4
-vim.opt.expandtab = true
+-- vim.opt.expandtab = true
 
 vim.o.autoindent = true
 
@@ -48,4 +51,5 @@ vim.opt.hlsearch = true
 
 vim.opt.spelllang = { "de", "en" }
 vim.opt.spell = true
+vim.opt.cmdheight = 0
 -- vim.opt.colorcolumn = "80"

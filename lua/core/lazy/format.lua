@@ -26,6 +26,9 @@ return { -- Autoformat
 		formatters_by_ft = {
 			lua = { "stylua" },
 			tex = { "latexindent" },
+			py = { "ast-grep" },
+			javascript = { "prettierd" },
+			html = { "prettierd" },
 			-- Conform can also run multiple formatters sequentially
 			-- python = { "isort", "black" },
 			--

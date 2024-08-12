@@ -144,10 +144,10 @@ return {
 		ls.add_snippets("java", {
 			ls.parser.parse_snippet("main", "public static void main(String[] args) {\n\t$0\n}"),
 			s(
-				"class",
-				fmt("public class {} {{\n\t{}\n}}", {
-					i(1, "name"),
-					i(0, ""),
+				"if",
+				fmt("if ({}) {{\n\t{}\n}}", {
+					i(1, ""),
+					i(2, ""),
 				})
 			),
 			s(

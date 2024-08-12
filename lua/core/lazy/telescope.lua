@@ -51,6 +51,11 @@ return { -- Fuzzy Finder (files, lsp, etc)
 			-- pickers = {}
 			defaults = {
 				prompt_prefix = "> ",
+				-- require("telescope").borderchars = {
+				-- 	prompt = { "─", "│", " ", "│", "╭", "╮", "│", "│" },
+				-- 	results = { "─", "│", "─", "│", "├", "┤", "╯", "╰" },
+				-- 	preview = { "─", "│", "─", "│", "╭", "╮", "╯", "╰" },
+				-- },
 			},
 			extensions = {
 				["ui-select"] = {
