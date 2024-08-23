@@ -9,5 +9,18 @@ return {
 	"nvim-treesitter/playground",
 	"tpope/vim-fugitive",
 	{ "MaximilianLloyd/ascii.nvim", dependencies = { "MunifTanjim/nui.nvim" } },
-	{ "folke/zen-mode.nvim", opts = {} },
+	{
+		"folke/zen-mode.nvim",
+		config = function()
+			vim.keymap.set("n", "<leader>zz", function()
+				require("zen-mode").setup({
+					window = {
+						width = 90,
+						options = {},
+					},
+				})
+				require("zen-mode").toggle()
+			end)
+		end,
+	},
 }
