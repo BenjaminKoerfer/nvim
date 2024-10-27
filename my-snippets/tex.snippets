@@ -17,6 +17,20 @@ snippet '([A-Za-z])(\d)' "auto subscript" wrA
 `!p snip.rv = match.group(1)`_`!p snip.rv = match.group(2)`
 endsnippet
 
+snippet cb "code block" iA
+\\texttt{$1}
+endsnippet
+
+context "math()"
+snippet and "land" iA
+\\land 
+endsnippet
+
+context "math()"
+snippet or "lor" iA
+\\lor 
+endsnippet
+
 snippet '([A-Za-z])_(\d\d)' "auto subscript2" wrA
 `!p snip.rv = match.group(1)`_{`!p snip.rv = match.group(2)`}
 endsnippet
@@ -39,17 +53,17 @@ snippet chap "chapter" i
 endsnippet
 
 snippet sec "section" i
-\\section{$1}$2
+\\section*{$1}$2
 endsnippet
 
 priority 10
 snippet subsec "subsection" i
-\\subsection{$1}$2
+\\subsection*{$1}$2
 endsnippet
 
 priority 100
 snippet subsubsec "subsubsection" i
-\\subsubsection{$1}$2
+\\subsubsection*{$1}$2
 endsnippet
 
 snippet fr "frame" i
@@ -124,6 +138,16 @@ endsnippet
 context "math()"
 snippet <= "leq" iA
 \leq 
+endsnippet
+
+context "math()"
+snippet (< "langle" iA
+\\langle $1 \\rangle
+endsnippet
+
+context "math()"
+snippet >) "rangle" iA
+\rangle
 endsnippet
 
 context "math()"
