@@ -93,6 +93,8 @@ return { -- LSP Configuration & Plugins
 					"rust-analyzer",
 				},
 			},
+			ts_ls = {},
+			gopls = {},
 		}
 
 		require("mason").setup()
