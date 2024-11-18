@@ -35,4 +35,6 @@ return {
 		lazy = false, -- This plugin is already lazy
 	},
 	"mfussenegger/nvim-dap",
+	"junegunn/fzf.vim",
+	"junegunn/fzf",
 }
