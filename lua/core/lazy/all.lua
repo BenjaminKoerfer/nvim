@@ -37,4 +37,10 @@ return {
 	"mfussenegger/nvim-dap",
 	"junegunn/fzf.vim",
 	"junegunn/fzf",
+	{
+		"zbirenbaum/copilot.lua",
+		cmd = "Copilot",
+		event = "InsertEnter",
+		config = true,
+	},
 }

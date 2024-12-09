@@ -97,6 +97,10 @@ return { -- LSP Configuration & Plugins
 			},
 			ts_ls = {},
 			gopls = {},
+			jsonls = {},
+			svelte = {},
+			html = {},
+			ltex = {},
 		}
 
 		require("mason").setup()
