@@ -84,7 +84,9 @@ return { -- LSP Configuration & Plugins
 					},
 				},
 			},
-			jdtls = {},
+			jdtls = {
+				cmd = { "jdtls" },
+			},
 			rust_analyzer = {
 				cmd = {
 					"rustup",
