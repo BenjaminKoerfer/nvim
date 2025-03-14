@@ -5,7 +5,7 @@ return {
     dependencies = {
       'nvim-lua/plenary.nvim',
       'nvim-telescope/telescope-fzf-native.nvim',
-      build = 'make'
+      build = 'make',
     },
     config = function()
       require('telescope').setup {
@@ -14,7 +14,13 @@ return {
             -- theme = "ivy",
           },
         },
+        extensions = {
+          fzf = {},
+        },
       }
+
+      require('telescope').load_extension('fzf')
+
       local ts = require('telescope.builtin')
       vim.keymap.set("n", "<leader>sf", ts.find_files)
       vim.keymap.set("n", "<leader>sn", function()
@@ -23,6 +29,12 @@ return {
         }
       end)
       vim.keymap.set("n", "<leader>sh", ts.help_tags)
+      vim.keymap.set("n", "<leader>sp", function()
+        ts.find_files {
+          cwd = vim.fs.joinpath(vim.fn.stdpath('data'), 'lazy')
+        }
+      end)
+      require "config.telescope.multigrep".setup()
     end,
   }
 }
