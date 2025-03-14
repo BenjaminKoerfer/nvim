@@ -1,3 +1,3 @@
-print("new config")
-
-TestFunction = function() print "hello" end
+require("config.lazy")
+require("config.remap")
+require("config.set")
