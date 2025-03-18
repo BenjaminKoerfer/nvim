@@ -24,14 +24,16 @@ return {
             t("one"),
             t("two"),
             t("three"),
+            i(""),
           })
         ),
         s("req", fmt("local {} = require('{}')", { i(1, "default"), rep(1) })),
+        s("map", fmt("vim.keymap.set(\"{}\", \"{}\", {})", { i(1, "mode"), i(2, "map"), i(3, "command") })),
       })
       ls.add_snippets("all", {
         s(
           "date",
-          f(function(_, _)
+          f(function()
             return os.date("%Y-%m-%d")
           end, {})
         ),

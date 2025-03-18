@@ -12,4 +12,4 @@ vim.g.have_nerd_font = true
 vim.opt.termguicolors = true
 
 -- with .lua only for lua files
-vim.cmd [[hi @function.builtin guifg=yellow]]
+--vim.cmd [[hi @function.builtin guifg=yellow]]
