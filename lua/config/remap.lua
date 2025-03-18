@@ -12,6 +12,7 @@ vim.keymap.set("n", "<M-j>", "<cmd>cnext<CR>")
 vim.keymap.set("n", "<M-k>", "<cmd>cprev<CR>")
 vim.keymap.set("n", "<leader>bd", function() vim.diagnostic.setqflist() end)
 vim.keymap.set("n", "<leader>u", "<cmd>UndotreeToggle<CR>")
+vim.keymap.set("t", "<esc><esc>", "<c-\\><c-n>")
 
 -- luasnip
 vim.keymap.set("i", "<C-l>", function()
