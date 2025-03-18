@@ -6,6 +6,10 @@ vim.opt.guicursor = ""
 vim.opt.scrolloff = 5
 vim.opt.undofile = true
 vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
+vim.opt.swapfile = false
+vim.opt.backup = false
+vim.g.have_nerd_font = true
+vim.opt.termguicolors = true
 
 -- with .lua only for lua files
 vim.cmd [[hi @function.builtin guifg=yellow]]
