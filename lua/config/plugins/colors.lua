@@ -4,8 +4,13 @@ return {
     name = "rose-pine",
     config = function()
       vim.cmd.colorscheme "rose-pine"
-      vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
-      vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
+      local groups = {
+        "Normal", "NormalNC", "NormalFloat", "VertSplit", "WinSeparator",
+      }
+
+      for _, group in ipairs(groups) do
+        vim.api.nvim_set_hl(0, group, { bg = "none" })
+      end
     end,
   },
 }
