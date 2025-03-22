@@ -49,7 +49,7 @@ vim.opt.scrolloff = 8
 
 vim.opt.hlsearch = true
 
-vim.opt.spelllang = { "de", "en" }
+-- vim.opt.spelllang = { "de", "en" }
 vim.opt.spell = true
 vim.opt.cmdheight = 0
 -- vim.opt.colorcolumn = "80"
