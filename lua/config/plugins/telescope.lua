@@ -34,6 +34,13 @@ return {
           cwd = vim.fs.joinpath(vim.fn.stdpath('data'), 'lazy')
         }
       end)
+      vim.keymap.set("n", "<leader>sd", ts.diagnostics)
+      vim.keymap.set("n", "<leader>/", function()
+        ts.current_buffer_fuzzy_find(require("telescope.themes").get_dropdown({
+          winblend = 10,
+          previewer = false,
+        }))
+      end, { desc = "[/] Fuzzily search in current buffer" })
       require "config.telescope.multigrep".setup()
     end,
   }
