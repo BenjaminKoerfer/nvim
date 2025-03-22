@@ -1,47 +1,71 @@
 return {
   {
-    'saghen/blink.cmp',
+    "hrsh7th/nvim-cmp",
     dependencies = {
-      'rafamadriz/friendly-snippets',
-      'L3MON4D3/LuaSnip',
-      'Saghen/blink.compat',
+      {
+        "L3MON4D3/LuaSnip",
+      },
+      "saadparwaiz1/cmp_luasnip",
+      "hrsh7th/cmp-nvim-lsp",
+      "hrsh7th/cmp-path",
+      "hrsh7th/cmp-buffer",
     },
-    version = '*',
-    opts = {
-      keymap = {
-        preset = 'default',
-        ['<C-j>'] = { 'select_and_accept', 'fallback' },
-        ['<C-k>'] = { 'snippet_forward', 'fallback' },
-        ['<C-b>'] = { 'snippet_backward', 'fallback' },
+    config = function()
+      local cmp = require("cmp")
+      local luasnip = require("luasnip")
 
-        ['<TAB>'] = {},
-        ['<S-TAB>'] = {},
-        ['<C-y>'] = {},
-      },
-      snippets = { preset = 'luasnip' },
-      sources = {
-        providers = {
-          lazydev = {
-            name = "LazyDev",
-            module = "lazydev.integrations.blink",
-            -- make lazydev completions top priority (see `:h blink.cmp`)
-            score_offset = 100,
-          },
+      cmp.setup({
+        snippet = {
+          expand = function(args)
+            luasnip.lsp_expand(args.body)
+          end,
         },
-        default = function(ctx)
-          local success, node = pcall(vim.treesitter.get_node)
-          if success and node and vim.tbl_contains({ 'comment', 'line_comment', 'block_comment' }, node:type()) then
-            return { 'buffer' }
-          else
-            return { 'lazydev', 'lsp', 'path', 'snippets', 'buffer' }
-          end
-        end
-      },
-      appearance = {
-        use_nvim_cmp_as_default = true,
-        nerd_font_variant = 'mono'
-      },
-      signature = { enabled = true },
-    },
-  }
+        window = {
+          -- completion = cmp.config.window.bordered(),
+          -- documentation = cmp.config.window.bordered(),
+        },
+        mapping = cmp.mapping.preset.insert({
+          ["<c-n>"] = cmp.mapping.select_next_item(),
+          ["<c-p>"] = cmp.mapping.select_prev_item(),
+          ["<c-Space>"] = cmp.mapping.complete({}),
+          ["<c-k>"] = cmp.mapping(function(fallback)
+            if luasnip.jumpable(1) then
+              luasnip.jump(1)
+            else
+              fallback()
+            end
+          end, { "i", "s" }),
+          ["<c-b>"] = cmp.mapping(function(fallback)
+            if luasnip.jumpable(-1) then
+              luasnip.jump(-1)
+            else
+              fallback()
+            end
+          end, { "i", "s" }),
+          ["<c-j>"] = cmp.mapping.confirm({
+            behavior = cmp.ConfirmBehavior.Replace,
+            select = true,
+          }),
+          ["<c-l>"] = cmp.mapping(function(fallback)
+            if luasnip.choice_active() then
+              luasnip.change_choice(1)
+            else
+              fallback()
+            end
+          end, { "i", "s" }),
+
+          -- disable tab completion
+          ["<Tab>"] = cmp.config.disable,
+          ["<S-Tab>"] = cmp.config.disable,
+        }),
+        sources = cmp.config.sources({
+          { name = "lazydev" },
+          { name = "luasnip" },
+          { name = "nvim_lsp" },
+          { name = "path" },
+          { name = "buffer",  keyword_length = 3 },
+        })
+      })
+    end,
+  },
 }
