@@ -29,15 +29,16 @@ return {
           if not client then return end
 
           -- setup formating wherever possible
-          if client.supports_method('textDocument/formatting') then
-            vim.api.nvim_create_autocmd('BufWritePre', {
-              buffer = args.buf,
-              callback = function()
-                vim.lsp.buf.format({ bufnr = args.buf, id = client.id })
-              end,
-            })
-          end
-        end,
+          vim.api.nvim_create_autocmd('BufWritePre', {
+            buffer = args.buf,
+            callback = function()
+              pcall(function()
+                vim.lsp.buf.format({ async = false })
+              end)
+            end,
+
+          })
+        end
       })
     end,
   }
