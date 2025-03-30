@@ -11,6 +11,7 @@ vim.opt.backup = false
 vim.g.have_nerd_font = true
 vim.opt.termguicolors = true
 vim.opt.signcolumn = "yes:1"
+vim.opt.mouse = ""
 
 -- with .lua only for lua files
 --vim.cmd [[hi @function.builtin guifg=yellow]]

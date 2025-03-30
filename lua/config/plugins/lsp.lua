@@ -20,6 +20,7 @@ return {
       require("lspconfig").jdtls.setup {}
       require("lspconfig").ts_ls.setup {}
       require("lspconfig").html.setup {}
+      require("lspconfig").nixd.setup {}
 
       -- autocmd on LspAttach
       vim.api.nvim_create_autocmd('LspAttach', {
