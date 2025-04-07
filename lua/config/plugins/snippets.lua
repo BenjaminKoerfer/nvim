@@ -3,6 +3,12 @@ return {
     "L3MON4D3/LuaSnip",
     version = "v2.*", -- Replace <CurrentMajor> by the latest released major (first number of latest release)
     build = "make install_jsregexp",
+    dependencies = {
+      "rafamadriz/friendly-snippets",
+      config = function()
+        require("luasnip.loaders.from_vscode").lazy_load()
+      end,
+    },
     config = function()
       local ls = require("luasnip")
       local s = ls.snippet
@@ -106,6 +112,9 @@ return {
             i(2, "max"),
           })
         ),
+      })
+      ls.add_snippets("javascript", {
+        s("test", t("Dies ist ein test")),
       })
     end,
   }
