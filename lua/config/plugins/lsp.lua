@@ -2,7 +2,6 @@ return {
   {
     'neovim/nvim-lspconfig',
     dependencies = {
-      'saghen/blink.cmp',
       {
         "folke/lazydev.nvim",
         ft = "lua", -- only load on lua files
@@ -21,6 +20,7 @@ return {
       require("lspconfig").ts_ls.setup {}
       require("lspconfig").html.setup {}
       require("lspconfig").nixd.setup {}
+      require("lspconfig").gopls.setup {}
 
       -- autocmd on LspAttach
       vim.api.nvim_create_autocmd('LspAttach', {
