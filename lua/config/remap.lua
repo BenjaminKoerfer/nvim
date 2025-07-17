@@ -26,6 +26,8 @@ vim.keymap.set("n", "grr", function() vim.lsp.buf.references() end)
 vim.keymap.set("n", "grn", function() vim.lsp.buf.rename() end)
 vim.keymap.set("n", "grd", require("telescope.builtin").lsp_definitions, { desc = "Go to definition" })
 vim.keymap.set("n", "grD", vim.lsp.buf.declaration, { desc = "Go to declaration" })
+-- todo
+vim.keymap.set("n", "<leader>st", "<cmd>TodoTelescope<CR>")
 
 -- luasnip
 vim.keymap.set("i", "<C-l>", function()

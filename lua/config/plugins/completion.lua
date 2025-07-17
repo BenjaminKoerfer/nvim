@@ -60,8 +60,8 @@ return {
           ["<S-Tab>"] = cmp.config.disable,
         }),
         sources = cmp.config.sources({
-          { name = "lazydev" },
           { name = "luasnip" },
+          { name = "lazydev" },
           { name = "nvim_lsp" },
           { name = "path" },
           { name = "buffer",  keyword_length = 3 },
