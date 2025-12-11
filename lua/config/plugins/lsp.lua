@@ -15,12 +15,18 @@ return {
       },
     },
     config = function()
-      require("lspconfig").lua_ls.setup {}
-      require("lspconfig").jdtls.setup {}
-      require("lspconfig").ts_ls.setup {}
-      require("lspconfig").html.setup {}
-      require("lspconfig").nixd.setup {}
-      require("lspconfig").gopls.setup {}
+      vim.lsp.config('lua_ls', {})
+      vim.lsp.config('jdtls', {})
+      vim.lsp.config('ts_ls', {})
+      vim.lsp.config('html', {})
+      vim.lsp.config('nixd', {})
+      vim.lsp.config('gopls', {})
+      vim.lsp.enable('lua_ls')
+      vim.lsp.enable('jdtls')
+      vim.lsp.enable('ts_ls')
+      vim.lsp.enable('html')
+      vim.lsp.enable('nixd')
+      vim.lsp.enable('gopls')
 
       -- autocmd on LspAttach
       vim.api.nvim_create_autocmd('LspAttach', {
