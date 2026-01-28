@@ -21,12 +21,14 @@ return {
       vim.lsp.config('html', {})
       vim.lsp.config('nixd', {})
       vim.lsp.config('gopls', {})
+      vim.lsp.config('tinymist', {})
       vim.lsp.enable('lua_ls')
       vim.lsp.enable('jdtls')
       vim.lsp.enable('ts_ls')
       vim.lsp.enable('html')
       vim.lsp.enable('nixd')
       vim.lsp.enable('gopls')
+      vim.lsp.enable('tinymist')
 
       -- autocmd on LspAttach
       vim.api.nvim_create_autocmd('LspAttach', {
