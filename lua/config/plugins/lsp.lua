@@ -22,6 +22,7 @@ return {
       vim.lsp.config('nixd', {})
       vim.lsp.config('gopls', {})
       vim.lsp.config('tinymist', {})
+
       vim.lsp.enable('lua_ls')
       vim.lsp.enable('jdtls')
       vim.lsp.enable('ts_ls')
