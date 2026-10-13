@@ -1,0 +1,96 @@
+global !p
+def math():
+    row, col = vim.current.window.cursor  # row is 1-based
+    row -= 1  # convert to 0-based indexing for Python
+    lines = vim.current.buffer[:row]
+    current_line = vim.current.line[:col]
+    lines.append(current_line)
+    text = '\n'.join(lines)
+    return text.count('$') % 2 == 1
+
+endglobal
+
+context "math()"
+snippet ~_ "land" iA
+attach(~, br: $1)
+endsnippet
+
+snippet mk "Math" wA
+$${1}$`!p
+if t[2] and t[2][0] not in [',', '.', '?', '-', ' ']:
+    snip.rv = ' '
+else:
+    snip.rv = ''
+`$2
+endsnippet
+
+snippet dm "display Math" wA
+$
+${1}
+$
+endsnippet
+
+context "math()"
+snippet sr "square" iA
+^2
+endsnippet
+
+context "math()"
+snippet cb "cube" iA
+^3
+endsnippet
+
+context "math()"
+snippet td "superscript" iA
+^($1)
+endsnippet
+
+snippet kor "korrolar" i
+#kor[
+$1
+]
+endsnippet
+
+snippet thm "theorem" i
+#thm[$1][
+$2
+]
+endsnippet
+
+snippet def "definition" i
+#def[$1][
+$2
+]
+endsnippet
+
+snippet prf "proof" i
+#prf[
+$1
+]
+endsnippet
+
+context "math()"
+snippet func "function" i
+$1 : $2 -> $3 : $4 |-> 
+endsnippet
+
+context "math()"
+snippet sum "sum" iA
+sum_($1)^($2)
+endsnippet
+
+priority 10
+context "math()"
+snippet infsum "infsum" iA
+sum_(k=1)^(oo)
+endsnippet
+
+context "math()"
+snippet '([A-Za-z])(\d)' "auto subscript" wrA
+`!p snip.rv = match.group(1)`_`!p snip.rv = match.group(2)`
+endsnippet
+
+context "math()"
+snippet '([A-Za-z])_(\d\d)' "auto subscript2" wrA
+`!p snip.rv = match.group(1)`_{`!p snip.rv = match.group(2)`}
+endsnippet

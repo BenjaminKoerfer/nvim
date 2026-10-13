@@ -22,7 +22,7 @@ return {
       vim.lsp.config('nixd', {})
       vim.lsp.config('gopls', {})
       vim.lsp.config('tinymist', {})
-
+      vim.lsp.config('pyright', {})
       vim.lsp.enable('lua_ls')
       vim.lsp.enable('jdtls')
       vim.lsp.enable('ts_ls')
@@ -30,6 +30,7 @@ return {
       vim.lsp.enable('nixd')
       vim.lsp.enable('gopls')
       vim.lsp.enable('tinymist')
+      vim.lsp.enable('pyright')
 
       -- autocmd on LspAttach
       vim.api.nvim_create_autocmd('LspAttach', {

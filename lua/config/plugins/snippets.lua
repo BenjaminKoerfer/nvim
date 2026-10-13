@@ -116,6 +116,11 @@ return {
       ls.add_snippets("javascript", {
         s("test", t("Dies ist ein test")),
       })
+      ls.add_snippets("typst", {
+        s("thm", fmt("#thm(\"{}\")[\n{}\n]", {i(1, ""), i(2, ""),})),
+        s("def", fmt("#def(\"{}\")[\n{}\n]", {i(1, ""), i(2, ""),})),
+        s("prf", fmt("#prf[\n{}\n]", {i(1, "")})),
+      })
     end,
   }
 }
